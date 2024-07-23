@@ -1,0 +1,38 @@
+/* styles.css */
+/* 回頂部 按鈕 */
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* 距離底部的距離 */
+    right: 20px; /* 距離右邊的距離 */
+    z-index: 1000; /* 確保按鈕在其他元素上面 */
+    display: none; /* 初始隱藏按鈕 */
+  }
+  
+  .back-to-top img {
+    width: 65px; /* 圖案的寬度 */
+    height: 65px; /* 圖案的高度 */
+    cursor: pointer; /* 鼠標懸停時顯示手型 */
+  }
+  /* 客服[哈哈你被坑了]按鈕的cs */
+  .text-with-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .text-with-button span {
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #d6d6d6; /* 保持原來的背景色 */
+    color: initial; /* 保持原來的文字色 */
+    cursor: pointer; /* 保持鼠標樣式 */
+    border: 2px solid #d6d6d6;
+  }

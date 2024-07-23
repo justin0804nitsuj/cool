@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="tw">
+        <meta charset="UTF-8"></meta>
+        <title>justin's 網佔</title>
+        <!-- css[文字置中] -->
+        <style>
+            .center-text {
+              text-align: center;
+            }
+        </style>
+        <!-- css[文字縮小] -->
+        <style>
+            .small-text {
+              font-size: 0.2em; /* 可以根據需要調整大小 */
+            }
+        </style>
+        <!-- css[文字隱形] -->
+        <style>
+            .invisible-text {
+              color: #ffffff; /* 設定文字顏色 */
+              background-color: #ffffff; /* 設定背景顏色 */
+            }
+          </style>
+          <!-- 回到頂部的箭頭 -->
+          <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <!-- 標籤 -->
+        <!-- 用&nbsp;來插入空格 -->
+        <h1 class="center-text">非常佔<span class="small-text">[位子]</span>的網站</h1>
+        <h3>第一篇幹話</h3>
+        <p>你知道嗎?</p>
+        <p>如果你閉上眼睛</p>
+        <span class="invisible-text">你就會什麼都看不到</span>
+        <p>是不是長知識了呢?</p>
+        <p>那當然!</p>
+        <br>
+        <br>
+        <p>底下還有東西</p>
+        <p>千萬別錯過囉!</p>
+        <div style="height: 2000px;"></div>
+        <div class="text-with-button">
+          <span>如果您對此網站有任何疑問 請勿聯絡客服</span>
+          <button id="myButton" onclick="changeText()">客服</button>
+        </div>
+        <!-- 客服[哈哈你被坑了]按鈕的js -->
+        <script>
+          let timeoutId;
+      
+          function changeText() {
+            const button = document.getElementById('myButton');
+            const originalText = button.innerText;
+            button.innerText = '哈哈你被坑了';
+            button.disabled = true;
+      
+            if (timeoutId) {
+              clearTimeout(timeoutId);
+            }
+      
+            timeoutId = setTimeout(() => {
+              button.innerText = originalText;
+              button.disabled = false;
+            }, 2000);
+          }
+        </script>
+
+        <p>因為這代表你被坑了 哈哈[如果想知道更多內容 請<span class="invisible-text">反白</span>[沒有癡]]</p>
+        <p>如果有的話&nbsp;&nbsp;&nbsp;一定是<strong>你</strong></p>
+        <!-- 返回頂部按鈕 -->
+         <a href="#" id="back-to-top" class="back-to-top">
+         <img src="top-icon.png" alt="返回頂部">
+         </a>
+
+         <div id="top"></div>
+
+          <!-- 引用 JavaScript 文件 -->
+         <script src="script.js"></script>
+    </body>
+</html>
+
